@@ -1,0 +1,8 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<div id="layout-content">
+    <app-content title="Todas las Peliculas" [peliculas]="peliculas" (actualizarComponente)="actualizar($event)"></app-content>
+    <app-sidebar (actualizarComponente)="actualizar($event)" (results_search)="listResults($event)"></app-sidebar>
+</div>
+
+<app-footer></app-footer>

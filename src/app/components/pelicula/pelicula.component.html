@@ -1,0 +1,15 @@
+
+<article class="item-pelicula">
+    <h3 class="title">{{pelicula.title}}</h3>
+    <p class="description">{{pelicula.description}}</p>
+    <button class="edit" (click)="setEdit()">Editar</button>
+    <button class="delete" (click)="delete()">Borrar</button>
+    <div id="edit-form" *ngIf="edit">
+        <h3 class="title">Editar pelicula</h3>
+        <form #editForm (ngSubmit)="submitForm(editForm)">
+            <input type="text" name="title-edit" id="title-edit" value={{pelicula.title}} [(ngModel)]="title">
+            <textarea name="description-edit" id="description-edit" cols="30" rows="10" [(ngModel)]="description">{{pelicula.description}}</textarea>
+            <button class="edit-button">Guardar</button>
+        </form>
+    </div>
+</article>

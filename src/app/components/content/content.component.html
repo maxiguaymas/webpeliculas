@@ -1,0 +1,6 @@
+<h2 class="new-peliculas">{{title}}</h2>
+<section id="content">
+    <app-pelicula *ngFor="let pelicula of peliculas;" [pelicula]="pelicula" (edited)="actualizarStorage($event)" (delete_pelicula)="deletePelicula($event)"></app-pelicula>
+    <h3 *ngIf="peliculas.length <= 0" class="empty">No hay peliculas...</h3>
+</section>
+
